@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Adi Purnomo — Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="navbar" id="navbar">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1 class="hero-title">
+      <span class="line line-1">PORTO</span>
+      <span class="line line-2">FOLIO</span>
+    </h1>
+
+    <div class="hero-photo">
+      <img src="assets/profile.png" alt="Foto Adi Purnomo" class="portrait">
+    </div>
+
+    <span class="hero-year">2026</span>
+
+    <p class="hero-desc">Saya Adi Purnomo, graphic designer yang mengerjakan berbagai kebutuhan visual untuk membantu ide, informasi, dan pesan tersampaikan dengan lebih baik.</p>
+
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-outline">Lihat Portofolio</a>
+      <a href="#contact" class="btn btn-filled">Hubungi Saya</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-photo">
+      <img src="assets/profile.png" alt="Foto Adi Purnomo" class="about-portrait">
+    </div>
+
+    <div class="about-content">
+      <h2 class="about-heading">Sedikit tentang saya</h2>
+      <div class="about-text">
+        <p>Saya Adi, graphic designer yang tertarik pada bagaimana sebuah ide bisa diterjemahkan menjadi visual yang sederhana dan mudah dipahami.</p>
+        <p>Saya pernah mengerjakan berbagai kebutuhan desain, mulai dari percetakan, media sosial, event, freelance, ilustrasi, hingga kebutuhan visual untuk bisnis sendiri.</p>
+        <p>Saya tidak selalu percaya bahwa desain yang lebih ramai berarti lebih menarik. Bagi saya, setiap elemen sebaiknya punya alasan untuk berada di dalam desain.</p>
+      </div>
+
+      <h3 class="about-subheading">Yang saya kerjakan</h3>
+      <ul class="skill-tags">
+        <li>Graphic Design</li>
+        <li>Social Media Design</li>
+        <li>Visual Content</li>
+        <li>Promotional Design</li>
+        <li>Poster Design</li>
+        <li>Illustration</li>
+      </ul>
+
+      <ul class="tool-icons">
+        <li><img src="assets/portfolio/icon/inkscape.png" alt="Tool 1"></li>
+        <li><img src="assets/portfolio/icon/krita.png" alt="Tool 2"></li>
+        <li><img src="assets/portfolio/icon/coreldraw.png" alt="Tool 3"></li>
+        <li><img src="assets/portfolio/icon/ibispaintx.png" alt="Tool 4"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h2 class="portfolio-title">PORTFOLIO</h2>
+
+    <div class="portfolio-grid">
+
+      <article class="portfolio-card" data-portfolio-index="0">
+        <a class="portfolio-avatar-link" href="https://instagram.com/lazisnupurwakarta" target="_blank" rel="noopener noreferrer" aria-label="@lazisnupurwakarta">
+          <img class="portfolio-avatar" src="assets/portfolio/logo-lazisnu.jpg" alt="@lazisnupurwakarta">
+        </a>
+        <a class="portfolio-username" href="https://instagram.com/lazisnupurwakarta" target="_blank" rel="noopener noreferrer">@lazisnupurwakarta</a>
+        <p class="portfolio-role">Social Media Design</p>
+        <div class="portfolio-images">
+          <img src="assets/portfolio/lazisnu-1.jpg" alt="Project Lazisnu Purwakarta 1">
+          <img src="assets/portfolio/lazisnu-2.jpg" alt="Project Lazisnu Purwakarta 2">
+          <img src="assets/portfolio/lazisnu-3.jpg" alt="Project Lazisnu Purwakarta 3">
+          <img src="assets/portfolio/lazisnu-4.jpg" alt="Project Lazisnu Purwakarta 4">
+          <img src="assets/portfolio/lazisnu-5.jpg" alt="Project Lazisnu Purwakarta 5">
+          <img src="assets/portfolio/lazisnu-6.jpg" alt="Project Lazisnu Purwakarta 6">
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-portfolio-index="1">
+        <a class="portfolio-avatar-link" href="https://instagram.com/warkop_lasparga" target="_blank" rel="noopener noreferrer" aria-label="@warkop_lasparga">
+          <img class="portfolio-avatar" src="assets/portfolio/logo-2.jpg" alt="@warkop_lasparga">
+        </a>
+        <a class="portfolio-username" href="https://instagram.com/warkop_lasparga" target="_blank" rel="noopener noreferrer">@warkop_lasparga</a>
+        <p class="portfolio-role">Social Media Design</p>
+        <div class="portfolio-images">
+          <img src="assets/portfolio/warkop-1.jpg" alt="Project Warkop Lasparga 1">
+          <img src="assets/portfolio/warkop-2.jpg" alt="Project Warkop Lasparga 2">
+          <img src="assets/portfolio/warkop-3.jpg" alt="Project Warkop Lasparga 3">
+          <img src="assets/portfolio/warkop-4.jpg" alt="Project Warkop Lasparga 4">
+          <img src="assets/portfolio/warkop-5.jpg" alt="Project Warkop Lasparga 5">
+          <img src="assets/portfolio/warkop-6.jpg" alt="Project Warkop Lasparga 6">
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-portfolio-index="2">
+        <a class="portfolio-avatar-link" href="https://instagram.com/pawon_pancong" target="_blank" rel="noopener noreferrer" aria-label="@pawon_pancong">
+          <img class="portfolio-avatar" src="assets/portfolio/logo-3.jpg" alt="@pawon_pancong">
+        </a>
+        <a class="portfolio-username" href="https://instagram.com/pawon_pancong" target="_blank" rel="noopener noreferrer">@pawon_pancong</a>
+        <p class="portfolio-role">Social Media Design</p>
+        <div class="portfolio-images">
+          <img src="assets/portfolio/pawon-1.jpg" alt="Project Pawon Pancong 1">
+          <img src="assets/portfolio/pawon-2.jpg" alt="Project Pawon Pancong 2">
+          <img src="assets/portfolio/pawon-3.jpg" alt="Project Pawon Pancong 3">
+          <img src="assets/portfolio/pawon-4.jpg" alt="Project Pawon Pancong 4">
+          <img src="assets/portfolio/pawon-5.jpg" alt="Project Pawon Pancong 5">
+          <img src="assets/portfolio/pawon-6.jpg" alt="Project Pawon Pancong 6">
+        </div>
+      </article>
+
+    </div>
+
+    <p class="portfolio-desc">Kumpulan project yang pernah saya kerjakan, dari kebutuhan social media dan promosi hingga ilustrasi dan project personal.</p>
+  </section>
+
+  <div class="portfolio-modal" id="portfolioModal" aria-hidden="true">
+    <div class="portfolio-modal-overlay" data-close></div>
+    <div class="portfolio-modal-content" role="dialog" aria-modal="true">
+      <button class="portfolio-modal-close" data-close aria-label="Tutup">&times;</button>
+      <div class="portfolio-modal-header">
+        <a class="portfolio-modal-avatar-link" id="modalAvatarLink" target="_blank" rel="noopener noreferrer">
+          <img class="portfolio-modal-avatar" id="modalAvatar" src="" alt="">
+        </a>
+        <div class="portfolio-modal-info">
+          <a class="portfolio-modal-username" id="modalUsername" target="_blank" rel="noopener noreferrer"></a>
+          <p class="portfolio-modal-role" id="modalRole"></p>
+        </div>
+      </div>
+      <div class="portfolio-modal-images" id="modalImages"></div>
+    </div>
+  </div>
+
+  <section class="contact" id="contact">
+    <h2 class="contact-title">MARI NGOBROL</h2>
+
+    <div class="contact-text">
+      <p>Punya project, kebutuhan desain, atau sekadar ingin membahas sebuah ide?</p>
+      <p>Ceritakan sedikit tentang apa yang sedang kamu kerjakan. Saya akan menghubungi kamu kembali.</p>
+    </div>
+
+    <div class="contact-buttons">
+      <a href="#" class="contact-btn contact-btn-disabled" aria-disabled="true">EMAIL</a>
+      <a href="https://wa.me/6285759128128" target="_blank" rel="noopener noreferrer" class="contact-btn">WHATSAPP</a>
+      <a href="https://instagram.com/purnomooadi" target="_blank" rel="noopener noreferrer" class="contact-btn">INSTAGRAM</a>
+      <a href="#" class="contact-btn contact-btn-disabled" aria-disabled="true">LINKEDIN</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Adi Purnomo &nbsp;|&nbsp; Graphic Designer</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
