@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => observer.observe(section));
 
-  // ===== Tombol contact yang belum aktif (Email, LinkedIn) =====
-  // Dipindah dari inline onclick="" ke sini supaya kompatibel dengan CSP script-src 'self'.
-  document.querySelectorAll('.contact-btn-disabled').forEach(btn => {
-    btn.addEventListener('click', (e) => e.preventDefault());
-  });
-
   // ===== Navbar dock-wave hover effect (seperti macOS dock) =====
   const navLinksContainer = document.getElementById('navLinks');
   const navLinkItems = Array.from(navLinks);
@@ -64,6 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ===== Tombol contact yang belum aktif (Email) =====
+  // Dipindah dari inline onclick="" ke sini supaya kompatibel dengan CSP script-src 'self'.
+  document.querySelectorAll('.contact-btn-disabled').forEach(btn => {
+    btn.addEventListener('click', (e) => e.preventDefault());
+  });
 
   // ===== Portfolio modal =====
   const modal = document.getElementById('portfolioModal');
@@ -140,4 +140,35 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // ===== Reveal animation: scroll + load + stagger + wipe =====
+  document.querySelectorAll('[data-reveal-stagger]').forEach(group => {
+    const items = group.querySelectorAll(':scope > [data-reveal]');
+    items.forEach((el, i) => el.style.setProperty('--reveal-delay', `${i * 100}ms`));
+  });
+
+  const loadEls = document.querySelectorAll('[data-reveal-when="load"]');
+  loadEls.forEach((el, i) => {
+    if (!el.style.getPropertyValue('--reveal-delay')) {
+      el.style.setProperty('--reveal-delay', `${i * 120}ms`);
+    }
+  });
+
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => loadEls.forEach(el => el.classList.add('is-visible')));
+  });
+
+  const scrollEls = Array.from(document.querySelectorAll('[data-reveal]'))
+    .filter(el => el.getAttribute('data-reveal-when') !== 'load');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  scrollEls.forEach(el => revealObserver.observe(el));
 });
