@@ -168,7 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -10px 0px' });
 
   scrollEls.forEach(el => revealObserver.observe(el));
+
+  // Fallback pengaman: kalau karena alasan apa pun (timing scroll, dsb.)
+  // sebuah elemen belum ke-trigger, paksa tampil supaya tidak ada yang hilang permanen.
+  setTimeout(() => {
+    document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(el => {
+      el.classList.add('is-visible');
+    });
+  }, 2500);
 });
