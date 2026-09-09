@@ -20,9 +20,28 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About Me</a></li>
-      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Ganti tema terang/gelap">
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="6" y2="6"/>
+          <line x1="18" y1="18" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+      <svg class="theme-icon theme-icon-star" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2 L14.2 9 L21.5 9 L15.7 13.3 L17.9 20.3 L12 16 L6.1 20.3 L8.3 13.3 L2.5 9 L9.8 9 Z" fill="currentColor"/>
+      </svg>
+      <span class="theme-toggle-thumb"></span>
+    </button>
   </nav>
 </header>
 
@@ -80,7 +99,7 @@
   </section>
 
   <section class="portfolio" id="portfolio">
-    <h2 class="portfolio-title" data-reveal>PORTFOLIO</h2>
+    <h2 class="portfolio-title" data-reveal>PORTOFOLIO</h2>
 
     <div class="portfolio-grid" data-reveal-stagger>
 
@@ -163,7 +182,7 @@
     </div>
 
     <div class="contact-buttons" data-reveal-stagger>
-      <a href="#" class="contact-btn contact-btn-disabled" aria-disabled="true" data-reveal>EMAIL</a>
+      <a href="mailto:adipurnoomoo@gmail.com" class="contact-btn" data-reveal>EMAIL</a>
       <a href="https://wa.me/6285759128128" target="_blank" rel="noopener noreferrer" class="contact-btn" data-reveal>WHATSAPP</a>
       <a href="https://instagram.com/purnomooadi" target="_blank" rel="noopener noreferrer" class="contact-btn" data-reveal>INSTAGRAM</a>
       <a href="https://www.linkedin.com/in/adi-purnomo-936a5b238/" target="_blank" rel="noopener noreferrer" class="contact-btn" data-reveal>LINKEDIN</a>
