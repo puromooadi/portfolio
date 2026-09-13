@@ -172,14 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   scrollEls.forEach(el => revealObserver.observe(el));
 
-  // Fallback pengaman: kalau karena alasan apa pun (timing scroll, dsb.)
-  // sebuah elemen belum ke-trigger, paksa tampil supaya tidak ada yang hilang permanen.
-  setTimeout(() => {
-    document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(el => {
-      el.classList.add('is-visible');
-    });
-  }, 2500);
-
   // ===== Dark / Light mode toggle =====
   const themeToggle = document.getElementById('themeToggle');
   const THEME_KEY = 'portfolio-theme';
